@@ -1,0 +1,6 @@
+hello :
+  path : '/hello'
+  defaults :
+    _content : '\Drupal\foomodule\Controller\HelloController::content'
+  requirements :
+    _permission : 'access content'
