@@ -28,7 +28,11 @@ class foomoduleBlock extends BlockBase {
   public function access(AccountInterface $account) {
     // By default, the block is visible unless user-configured rules indicate
     // that it should be hidden.
-    if ($account->hostname == '666') {
+    //
+    // We hide block visibility if hostname is 666 or current_path is "hello"
+    // I guess this method is called before block is fully build, so it's a nice way
+    // to set complex block visibility in code.
+    if (current_path() == "hello" || $account->hostname == '666') {
       return FALSE;
     }
     return TRUE;
