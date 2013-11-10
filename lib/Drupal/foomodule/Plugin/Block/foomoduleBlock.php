@@ -9,12 +9,14 @@ use Drupal\Core\Session\AccountInterface;
 /**
  * @Block(
  *   id = "foomoduleBLock",
- *   admin_label = @translation("foomoduleBLock"),
+ *   admin_label = @translation("foomoduleBLock")
  * )
  *
  * Note : Above annotations are REQUIRED for Drupal to discover
  * our new block. A block is actually a *type* of "plugin" and
  * block discovery is handled by plugin API.
+ *
+ * You have to clear cache or this file will not be discovered.
  *
  * Annotations are the default way to discovery plugins, theorically it
  * is possible to provides other ways to discover plugins
