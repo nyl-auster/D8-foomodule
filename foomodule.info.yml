@@ -1,3 +1,4 @@
+# declare our module to Drupal
 name : Foo module
 core : 8.x
 type : module

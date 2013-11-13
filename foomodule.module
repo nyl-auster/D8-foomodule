@@ -1,5 +1,5 @@
 <?php
 /**
- * This .module file may be completely empty in some cases; but
- * stil REQUIRED by Drupal, or moduleHandler will throw a ugly error for now.
+ * This .module file may be completely empty in some cases; but is
+ * stil REQUIRED by Drupal, or moduleHandler will throw a ugly error ( for now at least).
  */

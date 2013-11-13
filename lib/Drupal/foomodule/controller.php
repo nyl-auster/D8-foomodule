@@ -13,16 +13,15 @@
 namespace Drupal\foomodule;
 
 // use drupal ControllerBase, it provides us some shortcuts methods to
-// get our config, translate strings etc... without verbose call to container
-// (which is the class name in D8 for the Dependency Injector Container, which
-// is actually a call to a symfony Dependency Injector component)
+// get our config, translate strings etc... without verbose calls to Depencency Injector Container.
+// (Dependency injector Container is handled by a symfony component)
 //
 // This is a class we may extends with our own custom abstract class to provides us
 // usefull re-usable methods available in all our controllers for a specific project. So
 // create our own abstract customControllerBase extending ControllerBase sounds like
-// a reasonnable idea, to create all our custom controllers.
+// a reasonnable idea.
 //
-// Note that using this controllerBase class make our controller difficult to test with phpUnit,
+// Note that using this controllerBase class make our controller more difficult to test with phpUnit,
 // as ControllerBase make direct calls to Container class (so no automatic
 // dependency injection is actually done anywhere, and we depends on the dependency injector,
 // which is kind of stupid pattern...)
@@ -35,8 +34,8 @@ namespace Drupal\foomodule;
 // that particular implementation of injection dependency pattern.
 //
 // Usually, controller should only contain very minimal code : calling a service
-// ( \Drupal::getContainer()->get('language_manager) ) and return a string
-// or an renderable at the end of the method (or a http code error with
+// (e.g : \Drupal::getContainer()->get('language_manager) ) and return a string
+// or a renderable array at the end of the method (or a http code error with
 // a response symfony object i guess, there must be some drupal shortcut method
 // somewhere for that )
 use Drupal\Core\Controller\ControllerBase;

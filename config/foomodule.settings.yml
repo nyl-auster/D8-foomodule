@@ -1,1 +1,9 @@
+# this file hold settings for our module
+# Settings are then stored in default/files/config_xxxxxxx
+#
+# Here we simply create a "name" variable, that may be access
+# with config factory anywhere in our code. E.g :
+# $this->config('foomodule.settings')->get('name') or
+# \Drupal::config('foomodule.settings')->get('name') if config factory
+# has not been injected in your class
 name: Yann

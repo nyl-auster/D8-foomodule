@@ -1,5 +1,5 @@
 # route that says hello {variable}
-# change variable in admin/config/foomodule
+# change {variable} in admin/config/foomodule
 foomodule.hello:
   path : '/hello'
   defaults :
@@ -13,8 +13,8 @@ foomodule.hello:
 foomodule.settings_form:
   path: '/admin/config/foomodule'
   defaults:
-    # use drupal_get_form or something like that to automatically
-    # display our form on this route, wihout having to create a controller.
+    # special key to use drupal_get_form to display automatically our form on this route, 
+    # wihout having to create a controller.
     # we could have use _content and display ourselves the form on our 
     # controller, though...
     _form: 'Drupal\foomodule\FoomoduleConfigForm'
