@@ -3,3 +3,7 @@ Drupal 8 module example with a lot of comments. Contains :
 - config form example
 - controller and routing example
 
+Installation
+---------------
+clone repo, rename D8-foomodule to foomodule when cloning.
+

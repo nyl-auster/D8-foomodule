@@ -52,7 +52,13 @@ class controller extends ControllerBase {
     // config property is provided by ControllerBase class
     // this is actually a call to config.factory service, (@see drupal/core/core.services.yml)
     $name = $this->config('foomodule.settings')->get('name');
-    return "Hello $name";
+    $out = "<h2> Hello $name </h2>";
+    $out .= '<p>';
+    $out .= "This is an hello world test page from foomodule : ";
+    $out .= "Change the name displayed visiting " . $this->l('This page', "foomodule.settings.form");
+    $out .= '<p>';
+    $out .= '<p>';
+    return $out;
   }
 
 }

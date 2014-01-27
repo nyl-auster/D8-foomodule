@@ -47,8 +47,8 @@ class FoomoduleConfigForm extends ConfigFormBase {
    *  @param \Drupal\Core\Config\Context\ContextInterface $context
    *    The configuration context to use.
    */
-  public function __construct(ConfigFactory $config_factory, ContextInterface $context) {
-    parent::__construct($config_factory, $context);
+  public function __construct(ConfigFactory $config_factory) {
+    parent::__construct($config_factory);
   }
 
   /**
@@ -61,8 +61,7 @@ class FoomoduleConfigForm extends ConfigFormBase {
    */
   public static function create(ContainerInterface $container) {
     return new static(
-      $container->get('config.factory'),
-      $container->get('config.context.free')
+      $container->get('config.factory')
     );
   }
 

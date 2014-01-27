@@ -10,7 +10,7 @@ foomodule.hello:
     _permission : 'access content'
 
 # our settings form
-foomodule.settings_form:
+foomodule.settings.form:
   path: '/admin/config/foomodule'
   defaults:
     # special key to use drupal_get_form to display automatically our form on this route, 
